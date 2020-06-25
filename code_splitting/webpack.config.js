@@ -5,10 +5,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "none",
   entry: "./src/index.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-  },
   module: {
     rules: [
       {
@@ -20,6 +16,10 @@ module.exports = {
         ],
       },
     ],
+  },
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   plugins: [
     new MiniCssExtractPlugin(),
